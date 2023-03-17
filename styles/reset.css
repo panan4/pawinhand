@@ -1,6 +1,5 @@
-<style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
-</style>
+
 * {box-sizing: border-box;}
 html,body,h1,h2,h3,h4,h5,h6,/* 제목태그 */
 p,ul,ol,li,blockquote,dl,dd,dt,address,video,/* 블록태그 */

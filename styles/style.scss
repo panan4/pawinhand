@@ -10,7 +10,9 @@ $page_active:#fff; //페이지번호 활성화
 $padding:50px 0;
 //재사용 규칙
 @mixin layout {
-    width: 1200px; margin: 0 auto;
+    width:calc(100% - 30px); margin: 0 auto; overflow-x: hidden;
+    max-width: 1200px;
+    min-width: 320px;
     //재사용규칙은 규책호출@include로 호충
     //@mixin layout {//컨텐츠 크기+가운데정렬
 }
@@ -95,14 +97,53 @@ $padding:50px 0;
     @include layout;
     /* background-color:aqua; */
     .card {
-        display: flex; flex-flow: column nowrap;
-        justify-content: space-around; align-items: center;
         background-color:$bg1_eee;
-        width: 238px; height: 538px;
-        padding: 0 20px;
+        width: 23%;
+        padding: 30px 20px;
         
-        img {width: 100%; height: 100%;}
-        h2 {margin-top:20px; width: 100%;}
-        p {margin-top: 20px; width: 100%;}
+        img {width: 100%;}
+        h2 {margin-top:20px;}
+        p {margin-top: 20px;}
+    }
+}//card_wrap
+#qa_wrap {
+    @include layout;
+    h2{font-size: 22px;}
+    form{
+        fieldset {
+            input {
+                width: 1200px; margin: 16px 0 ; background-color: #eee; border: 0; height: 53px;
+            }
+            input::placeholder {
+                color: $font-color1; padding-left: 10px;
+            }
+            input[name$=id] {
+                margin-bottom: 0;
+            }
+            input[name$=number] {
+
+            }
+            textarea::placeholder {
+                color: $font-color1; padding:10px 0 0 10px; background-color: #eee; 
+            }
+            textarea {
+                width: 1200px; background-color: #eee; border: 0; height: 200px;
+            }
+            button {
+                margin-top: 16px;
+                width: 1200px; background-color: $bg2_222; color: $font-color2; height: 53px;
+            }
+        }
     }
 }
+footer {
+    height: 100px; background-color: $bg2_222; color: $font-color2; margin-top: 30px; text-align: center;
+    padding-top: 50px;
+}
+
+//media quree
+/* @media screen and (max-width:1024px) {
+    #header_bg{
+        header {background:coral;}
+    }
+} */

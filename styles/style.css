@@ -2,8 +2,11 @@
   background-color: #eee;
 }
 #header_bg header {
-  width: 1200px;
+  width: calc(100% - 30px);
   margin: 0 auto;
+  overflow-x: hidden;
+  max-width: 1200px;
+  min-width: 320px;
   background-color: aqua;
   height: 70px;
   display: flex;
@@ -22,8 +25,11 @@
 }
 
 #slide_wrap {
-  width: 1200px;
+  width: calc(100% - 30px);
   margin: 0 auto;
+  overflow-x: hidden;
+  max-width: 1200px;
+  min-width: 320px;
   position: relative;
 }
 #slide_wrap .slide_container .slide {
@@ -72,8 +78,11 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  width: 1200px;
+  width: calc(100% - 30px);
   margin: 0 auto;
+  overflow-x: hidden;
+  max-width: 1200px;
+  min-width: 320px;
   padding: 50px 0;
 }
 #gallery_wrap .gallery {
@@ -104,29 +113,100 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  width: 1200px;
+  width: calc(100% - 30px);
   margin: 0 auto;
+  overflow-x: hidden;
+  max-width: 1200px;
+  min-width: 320px;
   /* background-color:aqua; */
 }
 #card_wrap .card {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-around;
-  align-items: center;
   background-color: #eee;
-  width: 238px;
-  height: 538px;
-  padding: 0 20px;
+  width: 23%;
+  padding: 30px 20px;
 }
 #card_wrap .card img {
   width: 100%;
-  height: 100%;
 }
 #card_wrap .card h2 {
   margin-top: 20px;
-  width: 100%;
 }
 #card_wrap .card p {
   margin-top: 20px;
-  width: 100%;
-}/*# sourceMappingURL=style.css.map */
+}
+
+#qa_wrap {
+  width: calc(100% - 30px);
+  margin: 0 auto;
+  overflow-x: hidden;
+  max-width: 1200px;
+  min-width: 320px;
+}
+#qa_wrap h2 {
+  font-size: 22px;
+}
+#qa_wrap form fieldset input {
+  width: 1200px;
+  margin: 16px 0;
+  background-color: #eee;
+  border: 0;
+  height: 53px;
+}
+#qa_wrap form fieldset input::-moz-placeholder {
+  color: #000;
+  padding-left: 10px;
+}
+#qa_wrap form fieldset input:-ms-input-placeholder {
+  color: #000;
+  padding-left: 10px;
+}
+#qa_wrap form fieldset input::placeholder {
+  color: #000;
+  padding-left: 10px;
+}
+#qa_wrap form fieldset input[name$=id] {
+  margin-bottom: 0;
+}
+#qa_wrap form fieldset textarea::-moz-placeholder {
+  color: #000;
+  padding: 10px 0 0 10px;
+  background-color: #eee;
+}
+#qa_wrap form fieldset textarea:-ms-input-placeholder {
+  color: #000;
+  padding: 10px 0 0 10px;
+  background-color: #eee;
+}
+#qa_wrap form fieldset textarea::placeholder {
+  color: #000;
+  padding: 10px 0 0 10px;
+  background-color: #eee;
+}
+#qa_wrap form fieldset textarea {
+  width: 1200px;
+  background-color: #eee;
+  border: 0;
+  height: 200px;
+}
+#qa_wrap form fieldset button {
+  margin-top: 16px;
+  width: 1200px;
+  background-color: #222;
+  color: #fff;
+  height: 53px;
+}
+
+footer {
+  height: 100px;
+  background-color: #222;
+  color: #fff;
+  margin-top: 30px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+/* @media screen and (max-width:1024px) {
+    #header_bg{
+        header {background:coral;}
+    }
+} *//*# sourceMappingURL=style.css.map */
